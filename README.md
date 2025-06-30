@@ -136,7 +136,7 @@ resource_group_name = "rg-aks-wakaran"
 storage_account_name = "akswakaranXXXXXXXX"
 ```
 
-作成されたACR(Azure Container Refistry)名、ストレージアカウント名などが出力されます。
+作成されたACR(Azure Container Registry)名、ストレージアカウント名などが出力されます。
 
 なお、名前をAzureスコープで一意にする必要があるリソースには、他のハンズオン実施者や既存環境と衝突しないよう、サブスクリプションIDとリソースグループ名で作ったハッシュをTerraformの関数で作成し、名前の接尾辞として加えています。先の例では、`acr_name`の以下太字の部分(**XXXXXXXX**)がそれにあたります。
 
@@ -167,7 +167,7 @@ Metrics-server is running at https://<YOUR-AKS-API-SERVER>:443/api/v1/namespaces
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
-ノード一の状態も確認します。
+ノードの状態も確認します。
 
 ```bash
 kubectl get nodes
@@ -323,7 +323,7 @@ AKSには[Workload Identity](https://learn.microsoft.com/ja-jp/azure/aks/workloa
 
 ![alt text](https://learn.microsoft.com/ja-jp/azure/aks/media/workload-identity-overview/workload-id-model.png#lightbox)
 
-Workload Identityを理解するために、AKSにデプロイしたPodから、Azure CLIを使ってAzureストレージののBlobにアクセスしてみましょう。
+Workload Identityを理解するために、AKSにデプロイしたPodから、Azure CLIを使ってAzureストレージのBlobにアクセスしてみましょう。
 
 > [!NOTE]
 > このハンズオンではWorkload Identityを理解するため、順を追ってコマンドで作業します。手数は多いため、理解した後はTerraformなどでコード化をおすすめします
